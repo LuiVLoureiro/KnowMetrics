@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1F252F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0982c3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0a9de8;
+}
+
+/* Custom Components */
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-full 
+           transition-all duration-300 shadow-card hover:shadow-card-hover 
+           transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply bg-background-light hover:bg-background-lighter text-white font-medium py-3 px-6 
+           rounded-full transition-all duration-300 border border-primary/30 hover:border-primary;
+  }
+
+  .btn-success {
+    @apply bg-success hover:bg-green-600 text-white font-medium py-3 px-6 rounded-full 
+           transition-all duration-300;
+  }
+
+  .btn-danger {
+    @apply bg-error hover:bg-red-600 text-white font-medium py-3 px-6 rounded-full 
+           transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-background-light rounded-2xl p-6 shadow-card transition-all duration-300 
+           hover:shadow-card-hover;
+  }
+
+  .card-primary {
+    @apply bg-primary rounded-2xl p-6 shadow-card text-white;
+  }
+
+  .input-field {
+    @apply w-full bg-background-light text-white placeholder-gray-400 
+           border border-background-lighter focus:border-primary rounded-xl px-4 py-3 
+           outline-none transition-all duration-300 focus:ring-2 focus:ring-primary/30;
+  }
+
+  .select-field {
+    @apply w-full bg-background-light text-white border border-background-lighter 
+           focus:border-primary rounded-xl px-4 py-3 outline-none transition-all duration-300 
+           cursor-pointer appearance-none;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-white/80 
+           hover:text-white hover:bg-background-light transition-all duration-300;
+  }
+
+  .sidebar-link-active {
+    @apply bg-primary text-white shadow-card;
+  }
+
+  .metric-button {
+    @apply px-4 py-2 text-sm font-medium text-white bg-primary/20 hover:bg-primary 
+           rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .alternative-button {
+    @apply w-full p-5 bg-background-light text-white rounded-2xl cursor-pointer 
+           transition-all duration-300 shadow-card hover:shadow-card-hover 
+           hover:bg-background-lighter transform hover:-translate-y-1 
+           border border-transparent hover:border-primary/30;
+  }
+
+  .table-header {
+    @apply bg-primary text-white font-semibold py-3 px-4 text-center;
+  }
+
+  .table-cell {
+    @apply border border-background-lighter py-3 px-4 text-center text-white/90;
+  }
+
+  .progress-bar {
+    @apply h-2 bg-background-lighter rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-primary transition-all duration-500 ease-out;
+  }
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+}
+
+/* MathJax adjustments */
+.MathJax {
+  color: white !important;
+}
