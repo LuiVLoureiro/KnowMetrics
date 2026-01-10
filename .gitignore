@@ -1,39 +1,55 @@
-# Dependencies
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Database
+*.db
+*.sqlite
+backend/data/
+
+# Node.js
 node_modules/
-/.pnp
-.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Testing
-/coverage
-
-# Production
-/build
-/dist
-
-# Misc
-.DS_Store
+# React
+frontend/build/
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Editor directories
+# IDE
 .idea/
 .vscode/
 *.swp
 *.swo
-
-# Electron
-/out
-/release
-
-# Data files
-estatisticas/
-questoes/
+*~
 
 # OS
+.DS_Store
 Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Coverage
+coverage/
+.coverage
+htmlcov/
+
+# Distribution
+dist/
+build/
+*.egg-info/
